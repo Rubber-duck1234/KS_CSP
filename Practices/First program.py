@@ -1,4 +1,4 @@
 # KS First Program
 
 fav_class = input("What is your favorite class? ")
-print (fav_class, "is good but biology is better.")
+print (fav_class, "is okay but biology is better.")
