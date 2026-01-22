@@ -1,3 +1,1 @@
-name = "Twix"
-room = 202
-print(name)
+name = input("What is your name: ")
