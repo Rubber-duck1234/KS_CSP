@@ -7,7 +7,7 @@ breakfast = "egg"
 color = "green" 
 school_name = "UCAS"
 year = 2026
-eyecolor = "blue" 
+eyecolor = "blue"
 age = 15
 subject = "Biology"
 
