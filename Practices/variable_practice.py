@@ -12,3 +12,5 @@ age = 15
 subject = "Biology"
 
 print(name, number, bignumber, breakfast, color, school_name, year, eyecolor, age, subject)
+
+print ("hi")
