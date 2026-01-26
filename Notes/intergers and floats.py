@@ -6,8 +6,8 @@ total = round(price + (price * sales_tax), 2)
 
 print(total)"""
 
-apples = int(input("How many apples are there: "))
+apples = float(input("How many apples are there: "))
 
-friends = 8
+friends = float(input("how many firends do yo have: "))
 
 print("Each friend can have", apples//friends, "and I have", apples%friends, "left over")
