@@ -1,13 +1,13 @@
-"""price = float(input("what is the price of your item: $"))
+price = float(input("what is the price of your item: $"))
 
 sales_tax = float(input("what is the sales tax: %"))/100
 
 total = round(price + (price * sales_tax), 2)
 
-print(total)"""
+print(total)
 
-apples = float(input("How many apples are there: "))
+"""apples = float(input("How many apples are there: "))
 
 friends = float(input("how many firends do yo have: "))
 
-print("Each friend can have", apples//friends, "and I have", apples%friends, "left over")
+print("Each friend can have", apples//friends, "and I have", apples%friends, "left over")"""
