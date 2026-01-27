@@ -1,4 +1,4 @@
-item1 = "Apples"
+"""item1 = "Apples"
 item2 = "Bread"
 item3 = "milk"
 
@@ -16,4 +16,4 @@ print("Sales tax is 7% just so you know")
 round(total,2)
 
 tax = round(total/7,2)
-print("Your total is", tax + total)
+print("Your total is", tax + total)"""
