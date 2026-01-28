@@ -1,3 +1,3 @@
-name = input("What is your name: ")
+name = input("What is your name: ").strip().capitalize()
 
-print (name, "is a good name")
+print (name + ", Hu, okay")
