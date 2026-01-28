@@ -5,5 +5,7 @@ place = input("Give me a contry on earth: ").strip().capitalize()
 day = input("Give me a day of the week: ").strip().capitalize()
 animal = input("Give me an animal that starts with a consonant: ").strip().lower()
 place2 = input("Give me another contry on earth: ").strip().capitalize()
+animal2 = input("Give me an animal that starts with a vowel: ").strip().lower()
+place3 = input("Only one more contry to chose: ").strip().capitalize()
 
-print("You went " + verbing + " to " + place + " on " + day + " when sudenly a " + animal + " fell from the sky and flung you all the way to " + place2 + "!")
+print("You went " + verbing + " to " + place + " on " + day + " when sudenly a " + animal + " fell from the sky and flung you all the way to " + place2 + ", later you found out that an " + animal2 + " escaped form the zoo and was now eating all of " + place3 + "!")
