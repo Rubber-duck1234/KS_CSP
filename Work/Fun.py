@@ -1,8 +1,7 @@
-name = input("What is your name adventurer: ").strip().capitalize()
-
-print(f"Wellcome {name}!")
-direction = input("Do you turn left or right: ").strip().capitalize()
-if direction == "Right":
-    print("You find a town that seems to be bursting with econamic growth and prosparety.")
+print("You hear a knock on the door.")
+open = input("open? Y or N: ").strip().upper()
+if open == "Y":
+    name = input("Unknown man- What is your name solder: ").strip().title()
+    
 else:
-    print("You fall down a pit and die.")
+    print("You sit there is silence and then you feel the house blowup.")
