@@ -5,3 +5,4 @@ if open == "Y":
     print(f"{name},hu okay, lets go")
 else:
     print("You sit there is silence, and then you see the door to the house burst open and armed solders swarm in, you are taken away and will never be seen again.")
+print("You see the car they laded you into, pull up to a base. They pull you out of the car and push you into the baracks.")
