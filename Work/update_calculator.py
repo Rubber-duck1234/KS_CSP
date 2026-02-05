@@ -1,6 +1,9 @@
 # KS, 7th, updated calculaator
-def all():
-    int(input("What is your monthly income: "))
-    int(input("What is your monthly rent: "))
-    int(input("What is you monthly utilities costs:"))
-    int(input("What is you monthly grocery cost: "))
+def all(month):
+    return f"{month}"
+
+print(f"What is your {month()}")
+
+
+def math(percent):
+    return float(round(percent/income*100,2))
