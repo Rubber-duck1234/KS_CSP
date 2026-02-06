@@ -1,8 +1,6 @@
 # KS, 7th, updated calculaator
-def all(month):
-    return f"{month}"
-
-print(f"What is your {month()}")
+def all():
+    return 
 
 
 def math(percent):
