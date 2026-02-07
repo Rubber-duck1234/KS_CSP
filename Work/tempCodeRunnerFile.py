@@ -1,0 +1,1 @@
+month(input("What is you monthly income: $"))
