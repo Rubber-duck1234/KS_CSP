@@ -4,7 +4,7 @@
 int main(){
     // variable examples
     int age = 9999;
-    const float gpa = 3.98;
+    const float gpa = 4.0;
     char grade = 'A'; // single letter is single quotes
     char name[] = "Eric";
     int number;
