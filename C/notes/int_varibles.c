@@ -18,7 +18,7 @@ int main(){
     printf("Liters: %.2f\nFahrenheit: %.1f\npi: %.4f\n", liters, fahrenheit, pi);
     printf("Celcius is: %.2f\n", round(celcius));
     printf("%f\n", (int) pow(2,3));
-    sqrt(10); // save variable or print, dont just leav it.
+    sqrt(10); // save variable or print, dont just leav it. this square roots.
 
     return 0;
 }
