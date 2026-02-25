@@ -33,7 +33,7 @@ int main(){
     strcat(full_name, " ");
     strcat(full_name, last);
 
-    printf("%s\n", first);
+    printf("%s\n", full_name);
 
     //length of a string
     printf("%lu\n", strlen(full_name));
