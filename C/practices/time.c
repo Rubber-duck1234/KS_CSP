@@ -8,7 +8,8 @@ int main(){
     printf("What time is it (In millitary time): \n");
     scanf("%d", &time);
     if (time <= 11){
-        printf("Good morning.");
+        printf("Good morning.\n");
+    
     }
 
     return 0;
