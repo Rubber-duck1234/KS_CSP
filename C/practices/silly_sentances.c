@@ -4,16 +4,26 @@
 
 int main(){
 
-    char verb1[10];
-    char country1[20];// add a second word to concatanate to conutry
-    char thing1[20];
+    char verb[10];
+    char country[20];
+    char adjective[20];
+    char thing[20];
+    char contry2[20];
 
-    printf("Give me a verb: \n");
-    scanf("%s", &verb1);
+    printf("Give me a verb ending in ing: \n");
+    scanf("%s", &verb);
     printf("Give me a country: \n");
-    scanf("%s", &country1);
+    scanf("%s", &country);
+    printf("Give me a adjictive: \n");
+    scanf("%s", &adjective);
     printf("Give me a random thing: \n");
-    scanf("%s", &thing1);
+    scanf("%s", &thing);
+    printf("Give me another contry: \n");
+    scanf("%s", &contry2);
+
+    strcat(adjective, thing);
+
+    printf("You were %s to %s, when suddenly a %s fell out of the sky and kicked you to %s.",verb, country, adjective, contry2);
 
     return 0;
 }
