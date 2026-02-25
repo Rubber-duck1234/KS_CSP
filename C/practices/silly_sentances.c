@@ -14,16 +14,17 @@ int main(){
     scanf("%s", &verb);
     printf("Give me a country: \n");
     scanf("%s", &country);
-    printf("Give me a adjictive: \n");
+    printf("Give me a adjective: \n");
     scanf("%s", &adjective);
     printf("Give me a random thing: \n");
     scanf("%s", &thing);
     printf("Give me another contry: \n");
     scanf("%s", &contry2);
 
+    strcat(adjective, " ");
     strcat(adjective, thing);
 
-    printf("You were %s to %s, when suddenly a %s fell out of the sky and kicked you to %s.",verb, country, adjective, contry2);
-
+    printf("You were %s to %s, when suddenly a %s fell out of the sky and flung you to %s.",verb, country, adjective, contry2);
+    
     return 0;
 }
