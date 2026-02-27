@@ -10,10 +10,12 @@ int main(){
     if (time <= 11){
         printf("Good morning.\n");
     
-    } else if (time <= 20){
+    } else if (time <= 18){
         printf("Good afternoon.\n");
+    } else if (time <= 24){
+        printf("Good night\n");
     } else{
-        printf("Good night");
+        printf("Incorect.\n");
     }
 
     return 0;
