@@ -15,7 +15,7 @@ int main(){
         }else{
             printf("%d\n",num);
         }
-        num += 1;
+        num ++;
     }
 
     return 0;
