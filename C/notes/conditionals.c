@@ -40,7 +40,7 @@ int main(){
 
     char name[] = "Treyson";
 
-    if (strcmp(name, "Treyson") == 0){
+    if (strcmp(name, "Treyson") == 0){// 0 means true, so if name is treyson and true then:
         printf("Welcome Admin");
     }else{
         printf("Welcome %s\n",name);
