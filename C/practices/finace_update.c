@@ -34,7 +34,7 @@ int main(){
     printf("Your monthly utilities is %.0f$, that is %.0f percent of your income.\n", utilities, utilities_pct);
     printf("Your monthly groceries is %.0f$, that is %.0f percent of your income.\n", groceries, groceries_pct);
     printf("Your monthly transportation is %.0f$, that is %.0f percent of your income.\n", transportation, transprtation_pct);
-    printf("You should save %.0f, that is 10 percent of your income.\n", savings_pct);
+    printf("You should save %.0f$, that is 10 percent of your income.\n", savings_pct);
     printf("You have %.0f$ left for spending.\n", left);
 
     return 0;
