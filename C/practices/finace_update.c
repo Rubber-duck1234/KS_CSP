@@ -2,11 +2,11 @@
 #include <stdio.h>
 
 
-int input(char* change){
+int input(char change[]){
     printf("What is your monthly %s: $\n", change);
-    return scanf("%d", &change);
+    scanf("%d", &change);
 }
-float pct(int thing, int income){
+int pct(int thing, int income){
     return (thing / income * 100);
 }
 
@@ -28,7 +28,7 @@ int main(){
     printf("Your monthly utilities is %d$, that is %d percent of your income.\n", utilities, utilities_pct);
     printf("Your monthly groceries is %d$, that is %d percent of your income.\n", groceries, groceries_pct);
     printf("Your monthly transportation is %d$, that is %d percent of your income.\n", transportation, transprtation_pct);
-    printf("Yoy should save %d, that is 10 percent of your income.\n", savings_pct);
+    printf("You should save %d, that is 10 percent of your income.\n", savings_pct);
 
     return 0;
 }
