@@ -4,7 +4,7 @@
 
 int input(char change[]){
     printf("What is your monthly %s: $\n", change);
-    scanf("%d", &change);
+    scanf("%d", &);
 }
 int pct(int thing, int income){
     return (thing / income * 100);
