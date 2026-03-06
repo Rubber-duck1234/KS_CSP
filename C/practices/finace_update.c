@@ -2,34 +2,40 @@
 #include <stdio.h>
 
 
-int input(change){
+
+float input(char* change){
+    float var;
     printf("What is your monthly %s: $\n", change);
-    scanf("%d", &change);
+    scanf("%f", &var);
+    return var;
+     
 }
-int pct(int thing, int income){
-    int ans = (thing / income * 100);
-    return ans;
+float pct(float thing, float income){
+    return thing / income * 100;
+    
 }
 
 int main(){
 
-    int income = input("income");
-    int rent = input("rent");
-    int utilities = input("utilities");
-    int groceries = input("groceries");
-    int transportation = input("transportation");
+    float income = input("income");
+    float rent = input("rent");
+    float utilities = input("utilities");
+    float groceries = input("groceries");
+    float transportation = input("transportation");
 
-    int rent_pct = pct(rent, income);
-    int utilities_pct = pct(utilities, income);
-    int groceries_pct = pct(groceries, income);
-    int transprtation_pct = pct(transportation, income);
-    int savings_pct = (income / 10);
+    float rent_pct = pct(rent, income);
+    float utilities_pct = pct(utilities, income);
+    float groceries_pct = pct(groceries, income);
+    float transprtation_pct = pct(transportation, income);
+    float savings_pct = (income / 10);
+    float left = (income-(rent + utilities + groceries + transportation + savings_pct));
 
-    printf("Your monthly rent is %d$, that is %d percent of your income.\n", rent, rent_pct);
-    printf("Your monthly utilities is %d$, that is %d percent of your income.\n", utilities, utilities_pct);
-    printf("Your monthly groceries is %d$, that is %d percent of your income.\n", groceries, groceries_pct);
-    printf("Your monthly transportation is %d$, that is %d percent of your income.\n", transportation, transprtation_pct);
-    printf("You should save %d, that is 10 percent of your income.\n", savings_pct);
+    printf("Your monthly rent is %.0f$, that is %.0f percent of your income.\n", rent, rent_pct);
+    printf("Your monthly utilities is %.0f$, that is %.0f percent of your income.\n", utilities, utilities_pct);
+    printf("Your monthly groceries is %.0f$, that is %.0f percent of your income.\n", groceries, groceries_pct);
+    printf("Your monthly transportation is %.0f$, that is %.0f percent of your income.\n", transportation, transprtation_pct);
+    printf("You should save %.0f, that is 10 percent of your income.\n", savings_pct);
+    printf("You have %.0f$ left for spending.\n", left);
 
     return 0;
 }
