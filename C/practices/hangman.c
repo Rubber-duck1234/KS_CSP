@@ -21,19 +21,19 @@ int main(){
     const char *guess_word = random_word[random];
 
 
-    printf("Instructions: To play hangman, you will be given a word you need to guess(by letter).Every time you guess a letter wrong, one part of a person will be built. If you end up guessing all the letters in the word, you win. However, if you guess too many wrong times and the person is built, you lose.\n");
+    printf("Instructions: To play hangman, you will be given a word you need to guess(by letter). Every time you guess a letter wrong, one part of a person will be built. If you end up guessing all the letters in the word, you win. However, if you guess too many wrong times and the person is built, you lose.\n");
 
 
 
     
-    while(loss < max){
+    while(1 == 1){
         char display[20];
-        char guess[10];
+        char guess;
 
         printf("Guess a letter: ");
-        scanf("%c", &guess);
+        scanf("%s", &guess);
 
-        
+
 
         if (loss == 0){
             printf("----------\n");
@@ -52,6 +52,7 @@ int main(){
             building('o','|','/','\\','/', '\\');
         }
     }
+
 
     return 0;
 }
