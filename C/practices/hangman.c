@@ -4,12 +4,12 @@
 #include <time.h>
 
 char let_guess[] = {};
-int loss = 5;
-int max = 8;
-char guess[2];
+int loss = 0;
+int max = 6;
+
 
 char building(char head,char body,char arm1,char arm2,char leg1,char leg2){
-    printf("----------\n|        |\n|        %c\n|        %c%c%c\n|        %c%c\n|\n----------", head, arm1, body, arm2, leg1, leg2);
+    printf("----------\n|        |\n|        %c\n|       %c%c%c\n|       %c%c\n|\n----------", head, arm1, body, arm2, leg1, leg2);
 }
 
 int main(){
@@ -27,12 +27,13 @@ int main(){
 
     
     while(loss < max){
-    char display[20];
+        char display[20];
+        char guess[10];
 
-    //printf("Guess a letter: ");
-    //scanf('%c', &guess);
+        printf("Guess a letter: ");
+        scanf("%c", &guess);
 
-
+        
 
         if (loss == 0){
             printf("----------\n");
@@ -47,8 +48,9 @@ int main(){
             building('o','|','/','\\',' ',' ');
         }else if (loss == 5){
             building('o','|','/','\\','/', ' ');
-        }break;
-        
+        }else if (loss == 6){
+            building('o','|','/','\\','/', '\\');
+        }
     }
 
     return 0;
