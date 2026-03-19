@@ -3,7 +3,6 @@
 #include <stdlib.h>
 #include <time.h>
 #include <string.h>
-int turn = 0;
 char let_guess[6] = {};
 int loss = 0;
 int max = 6;
@@ -22,25 +21,30 @@ int main(){
 
     const char *guess_word = random_word[random];
 
+    char guess_len = sizeof (guess_word)/ sizeof (guess_word[0]);
 
     printf("Instructions: To play hangman, you will be given a word you need to guess(by letter). Every time you guess a letter wrong, one part of a person will be built. If you end up guessing all the letters in the word, you win. However, if you guess wrong too many times you lose.\n");
 
     
     while(1 == 1){
-        char word_display[] = {0};
+        char word_display[] = {guess_len};
         char guess;
 
-        printf("Guess a letter: ");
-        scanf("%s", &guess);
+        printf("Guess a letter: \n");
+        scanf("%c", &guess);
 
-        char* check = strchr(guess_word, guess);
-
-        if(check != NULL){
-           let_guess[turn] = guess;
-        }else{
-            loss ++;
-            turn ++;
+        int correct = 0;
+        for(char x = 0; x < word_display; x++){
+            if (guess_word[x] == guess){
+                word_display[x] = guess;
+                correct++;
+            }
         }
+        if(correct == 0){
+            loss++;
+        }
+
+
         printf("%s", let_guess);
 
         if (loss == 0){

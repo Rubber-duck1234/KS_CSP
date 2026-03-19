@@ -12,7 +12,7 @@ int main(){
     printf("\n"); // just for a new line
 
 
-    int names_len = sizeof(names)/ sizeof(names[0]); // findes how many bytes of space it takes in program
+    int names_len = sizeof(names)/ sizeof(names[0]); // finds how many bytes of space it takes in program
     for(int x = 0; x < names_len; x++){
         printf("%s LaRose\n", names[x]);
     }
