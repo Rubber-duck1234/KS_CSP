@@ -22,7 +22,19 @@ void hint(char guess_word){
     }else if (guess_word == "glyph"){
         printf("A word for a symbole\n");
     }else if (guess_word == "syzygy"){
-        printf("\n");
+        printf("planets / celestial objects lined up.\n");
+    }else if (guess_word == "zuzwang"){
+        printf("A situation in chess\n");
+    }else if (guess_word == "house"){
+        printf("A place to live\n");
+    }else if ("dermatoglyphics"){
+        printf("study of fingerprints\n");
+    }else if (guess_word == "xebec"){
+        printf("A mediteranian sailing ship.\n");
+    }else if (guess_word == "bdellium"){
+        printf("goo gum\n");
+    }else if (guess_word == "grawlix"){
+        printf("syombols used to replace profanity.\n");
     }
 }
 
