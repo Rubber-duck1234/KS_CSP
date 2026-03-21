@@ -14,7 +14,7 @@ void building(char head,char body,char arm1,char arm2,char leg1,char leg2){
     printf("----------\n|        |\n|        %c\n|       %c%c%c\n|       %c%c\n|\n----------", head, arm1, body, arm2, leg1, leg2); // function for the structure of the hanman platform. KS
 }
 
-void hint(char guess_word){
+void hint(const char* guess_word){// function for hint. KS and IM
     if (guess_word == "onyx"){
         printf("its a black-ish color.\n");
     }else if (guess_word == "xylaphone"){
@@ -101,10 +101,14 @@ int main(){
             building('o','|',' ',' ',' ',' ');
         }else if (loss == 3){
             building('o','|','/',' ',' ',' ');
+            printf("here is a hint: ");
+            hint(guess_word);
         }else if (loss == 4){
             building('o','|','/','\\',' ',' ');
         }else if (loss == 5){
             building('o','|','/','\\','/', ' ');
+            printf("here is the hint again: ");
+            hint(guess_word);
         }else if (loss == 6){
             building('o','|','/','\\','/', '\\');
             printf("You lose.\n");
