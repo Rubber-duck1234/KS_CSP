@@ -25,13 +25,14 @@ int main(){
     printf("Instructions: To play hangman, you will be given a word you need to guess(by letter). Every time you guess a letter wrong, one part of a person will be built. If you end up guessing all the letters in the word, you win. However, if you guess wrong too many times you lose.\n");// instructions. IM
     
     char word_display[guess_len + 1];
-    for(int i = 0; i < guess_len; i++) word_display[i] = '_';
-    word_display[guess_len] = '\0';
+    for(int i = 0; i < guess_len; i++) {
+        word_display[i] = '_';
+    }
+    
     
 
 
     while(0 == 0){
-        strcpy(word_display, guess_word);
 
     
         printf("\n%s\n", word_display);
