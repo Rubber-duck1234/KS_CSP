@@ -3,14 +3,17 @@
 #include <stdlib.h>
 #include <time.h>
 #include <string.h>
-char let_guess[100];
+char let_guess[26];// letter holder. IM
 int loss = 0;
 int turn = 0;
  
 
+
+
 void building(char head,char body,char arm1,char arm2,char leg1,char leg2){
     printf("----------\n|        |\n|        %c\n|       %c%c%c\n|       %c%c\n|\n----------", head, arm1, body, arm2, leg1, leg2); // function for the structure of the hanman platform. KS
 }
+
 
 int main(){
     const char *random_word[] = {"onyx", "xylaphone", "glyph", "syzygy", "zuzwang", "house", "dermatoglyphics", "xebec", "bdellium", "grawlix"};// list of random words to use. IM
@@ -18,27 +21,27 @@ int main(){
     srand(time(NULL)); 
     int random = rand() % num_words;
 
-    const char *guess_word = random_word[rand() % num_words];
+    const char *guess_word = random_word[rand() % num_words];// next line also random word puller. KS
 
     int guess_len = strlen (guess_word);
+
 
     printf("Instructions: To play hangman, you will be given a word you need to guess(by letter). Every time you guess a letter wrong, one part of a person will be built. If you end up guessing all the letters in the word, you win. However, if you guess wrong too many times you lose.\n");// instructions. IM
     
     char word_display[guess_len + 1];
-    for(int i = 0; i < guess_len; i++) {
+    for(int i = 0; i < guess_len; i++) {// more display printing. KS
         word_display[i] = '_';
     }
     
     
 
-
     while(0 == 0){
 
     
-        printf("\n%s\n", word_display);
+        printf("\n%s\n", word_display);// prints displays. IM
         printf("%s\n", let_guess);
         char guess;
-        printf("Guess a letter: \n");
+        printf("Guess a letter: \n");//  takes in input, IM
         scanf(" %c", &guess);
 
         int correct = 0;
@@ -49,8 +52,8 @@ int main(){
             }
         }
 
-        let_guess[turn++] = guess;
-        let_guess[turn] = '\0';
+        let_guess[turn++] = guess;//   adds guess, KS
+        let_guess[turn] = '\0';// to let it know when it ends
         if(!correct){
             loss++;// updates the losses.IM
         }
@@ -58,7 +61,7 @@ int main(){
 
         printf("%s, these are the words you have guessed.\n", let_guess);
         
-        if (strcmp(word_display, guess_word)==0){
+        if (strcmp(word_display, guess_word)==0){// compars to see if word is built. KS
             printf("You won!\n");
             break;
         }
@@ -70,7 +73,7 @@ int main(){
             printf("----------\n");
             printf("|\n|\n|\n|\n|\n|\n----------");
         }else if (loss == 1){
-            building('o',' ',' ',' ',' ',' ');// IM
+            building('o',' ',' ',' ',' ',' ');//all function calls for structure. IM
         }else if (loss == 2){
             building('o','|',' ',' ',' ',' ');
         }else if (loss == 3){
