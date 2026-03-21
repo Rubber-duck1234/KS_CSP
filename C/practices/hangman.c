@@ -14,6 +14,17 @@ void building(char head,char body,char arm1,char arm2,char leg1,char leg2){
     printf("----------\n|        |\n|        %c\n|       %c%c%c\n|       %c%c\n|\n----------", head, arm1, body, arm2, leg1, leg2); // function for the structure of the hanman platform. KS
 }
 
+void hint(char guess_word){
+    if (guess_word == "onyx"){
+        printf("its a black-ish color.\n");
+    }else if (guess_word == "xylaphone"){
+        printf("it is a musical instremnt.\n");
+    }else if (guess_word == "glyph"){
+        printf("A word for a symbole\n");
+    }else if (guess_word == "syzygy"){
+        printf("\n");
+    }
+}
 
 int main(){
     const char *random_word[] = {"onyx", "xylaphone", "glyph", "syzygy", "zuzwang", "house", "dermatoglyphics", "xebec", "bdellium", "grawlix"};// list of random words to use. IM
@@ -87,7 +98,7 @@ int main(){
             printf("You lose.\n");
             break;// IM
         }
-
+       
     }
 
     return 0;
