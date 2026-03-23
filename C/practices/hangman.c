@@ -91,7 +91,6 @@ int main(){
         
 
 
-
         if (loss == 0){
             printf("----------\n");
             printf("|\n|\n|\n|\n|\n|\n----------");
