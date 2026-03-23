@@ -20,7 +20,7 @@ void hint(const char* guess_word){// function for hint. KS and IM
     }else if (guess_word == "xylaphone"){
         printf("it is a musical instremnt.\n");
     }else if (guess_word == "glyph"){
-        printf("A word for a symbole\n");
+        printf("A word for a symbol\n");
     }else if (guess_word == "syzygy"){
         printf("planets / celestial objects lined up.\n");
     }else if (guess_word == "zuzwang"){
