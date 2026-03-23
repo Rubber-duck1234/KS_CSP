@@ -34,7 +34,7 @@ void hint(const char* guess_word){// function for hint. KS and IM
     }else if (guess_word == "bdellium"){
         printf("goo gum\n");
     }else if (guess_word == "grawlix"){
-        printf("syombols used to replace profanity.\n");
+        printf("symbol used to replace profanity.\n");
     }
 }
 
