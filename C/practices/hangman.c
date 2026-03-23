@@ -32,7 +32,7 @@ void hint(const char* guess_word){// function for hint. KS and IM
     }else if (guess_word == "xebec"){
         printf("A mediteranian sailing ship.\n");
     }else if (guess_word == "bdellium"){
-        printf("goo gum\n");
+        printf("goo gum.\n");
     }else if (guess_word == "grawlix"){
         printf("symbol used to replace profanity.\n");
     }
