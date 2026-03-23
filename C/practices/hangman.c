@@ -27,7 +27,7 @@ void hint(const char* guess_word){// function for hint. KS and IM
         printf("A situation in chess\n");
     }else if (guess_word == "house"){
         printf("A place to live\n");
-    }else if (guess_word = "dermatoglyphics"){
+    }else if (guess_word == "dermatoglyphics"){
         printf("study of fingerprints\n");
     }else if (guess_word == "xebec"){
         printf("A mediteranian sailing ship.\n");
