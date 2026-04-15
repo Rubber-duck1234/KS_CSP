@@ -4,6 +4,41 @@
     <head>
         <title>Advanced html notes</title>
         <meta charset="UTF-8">
+        <!--Embedded style sheet go in the head tag.-->
+        <style>
+            *{
+                background-color: rgb(255, 0, 150);
+            }
+            img{
+                width: 10%;
+                height: 900px;
+                border: 12px inset gold;
+            }
+            #unordered{
+                font-family: papyrus, fantasy;
+            }
+            #ordered{
+                color: green;
+                background-color: blanchedalmond;
+            }
+            .odd{
+                background-color: grey;
+                color: orange;
+            }
+            p{
+                background-color: red;
+                color: #ed78;
+                background-color: blueviolet;
+            }
+            h1{
+                text-align: center;
+                font-size: 50;
+                border: 3px solid white;
+            }
+            a{
+                font-size: 2em;      
+            }
+        </style>                <!--The em in the a{} is percent of original size-->
     </head>
 
     <body>
@@ -13,12 +48,14 @@
         <div>
             <p>This is the div</p>
         </div>
+        <div id="ordered">
         <ol>
-            <li>Computer Science Principals</li>
+            <li class="odd">Computer Science Principals</li>
             <li>Computer Programing</li>
-            <li>Advanced computer programing</li>
+            <li class="odd">Advanced computer programing</li>
+        </div>
         </ol>
-        <div id="unordered" style="font-family: papyrus;">
+        <div id="unordered">
         <p>this is how we make an unordered(bulleted) list</p>
         <ul>
             <li>Apple</li>
