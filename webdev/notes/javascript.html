@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Javascript Notes</title>
+        <meta charset="UTF-8">
+        <style>
+            #match{
+                display: none;
+                width: 50%;
+            }
+        </style>
+        <script>
+            let count = 0
+            let imgs=["https://www.google.com/imgres?q=dog&imgurl=https%3A%2F%2Fcdn.outsideonline.com%2Fwp-content%2Fuploads%2F2023%2F03%2FFunny_Dog_H.jpg%3Fauto%3Dwebp%26width%3D3840%26quality%3D75%26fit%3Dcover&imgrefurl=https%3A%2F%2Fwww.outsideonline.com%2Fculture%2Factive-families%2Fhow-to-read-dog-body-language-happy-aggressive%2F&docid=LdRA27WMeUqgyM&tbnid=Cn-C714zhPlTWM&vet=12ahUKEwj12c-Ap4KUAxXdOEQIHXOqHrsQnPAOegQILRAB..i&w=2400&h=1350&hcb=2&ved=2ahUKEwj12c-Ap4KUAxXdOEQIHXOqHrsQnPAOegQILRAB","https://www.google.com/imgres?q=dog&imgurl=https%3A%2F%2Fwww.diamondpet.com%2Fwp-content%2Fuploads%2F2023%2F07%2Fbrown-chihuahua-standing-in-grass-071723.jpg&imgrefurl=https%3A%2F%2Fwww.diamondpet.com%2Fblog%2Fbehavior%2Fpsychology%2Fsigns-your-dog-is-antisocial%2F&docid=KQqKgVF2sqxBUM&tbnid=-njUM-DXMZn-BM&vet=12ahUKEwj12c-Ap4KUAxXdOEQIHXOqHrsQnPAOegQIKxAB..i&w=2500&h=1312&hcb=2&ved=2ahUKEwj12c-Ap4KUAxXdOEQIHXOqHrsQnPAOegQIKxAB","https://www.google.com/imgres?q=dog&imgurl=https%3A%2F%2Fwww.marthastewart.com%2Fthmb%2FHQI3ny1pDXccX-wBxtr_qbk-JxE%3D%2F1500x0%2Ffilters%3Ano_upscale()%3Amax_bytes(150000)%3Astrip_icc()%2Fms-papillon-getty-d5446ac395a64238b42e7866149b9627.jpg&imgrefurl=https%3A%2F%2Fwww.marthastewart.com%2F7570673%2Fmost-intelligent-dog-breeds&docid=wmk5tMmJdnpFLM&tbnid=cj-XfgexyRgq6M&vet=12ahUKEwj12c-Ap4KUAxXdOEQIHXOqHrsQnPAOegQIKhAB..i&w=1500&h=1010&hcb=2&ved=2ahUKEwj12c-Ap4KUAxXdOEQIHXOqHrsQnPAOegQIKhAB"]
+            let img_count = 0
+            function change(){
+                if (img_count >= imgs.length){
+                    img_count = 0
+                }else{
+                    img_count += 1
+                }
+                document.getElementById('match').src = imgs[img_count]
+            }
+            function update(){
+                document.getElementById('title').style.color=document.getElementById('colorchoise').value
+            } 
+            function add(){
+                count += 1
+                document.getElementById('number').innerHTML = count
+            }
+            function hover(id){
+                document.getElementById(id).style.backgroundColor = "yellow"
+                document.getElementById(id).style.color = "black"
+            }
+            function unhover(id){
+                document.getElementById(id).style.backgroundColor = "lightgrey"
+                document.getElementById(id).style.color = "black"
+            }
+            function show(){
+                if(document.getElementById("match").style.display == "block"){
+                    document.getElementById("match").style.display = "none"
+                }else{
+                document.getElementById("match").style.display = "block"
+                }
+            }
+        </script><!--use only document if you wat to conect it to all.-->
+    </head>
+    <body>
+        <h1 id="title" onmouseover="alert('this is about javaScript!')">Javascript Notes</h1>
+        <input type="color" id="colorchoise">
+        <button id="one" onclick="update()" onmouseover="hover('one')" onmouseout="unhover('one')">click me</button>
+        <p id="number" onmouseover="show()">0</p>
+        <button id="two" onclick="add()" onmouseover="hover('two')" onmousedown="add()" onmouseout="unhover('two')">Add</button>
+        <br>
+        <img id="match" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGMrVHmUI328jxoAVUL06nUCDzXyJMtpZYsQ&s" alt="image" onmouseover="change()"/>
+    </body>
+
+</html>
