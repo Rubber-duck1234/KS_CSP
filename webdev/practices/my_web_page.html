@@ -11,7 +11,9 @@
         <style>
             #extra{
                 display: none;
-                width: 50%;
+            }
+            #extratwo{
+                display: none;
             }
             body{ 
                 font-family: "Tektur", sans-serif;
@@ -20,8 +22,6 @@
                 font-style: normal;
                 font-variation-settings:
                 "wdth" 100;
-
-                
                 }   
             h1{
                 text-align: center;
@@ -68,6 +68,32 @@
                 margin: 10px;
             }
         </style>
+        <script>
+            let imgs=["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8WkToQHkTrOC7hmF7MqJxSvSxmpdtaGfQmQ&s","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3OMnjC41qh9tLOsEX_XUnVS2ZvdtlA55kCQ&s", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb2D6Zyv1u7AJ7BzbWdNP_4Hkgn5lRuuuJZg&s"]
+            let imgcount = 0
+            function show(){
+                if (document.getElementById("extra").style.display == "block"){
+                    document.getElementById("extra").style.display = "none"
+                }else{
+                    document.getElementById("extra").style.display = "block"
+                }
+            }
+            function showimg(){
+                if (document.getElementById("extratwo").style.display == "block"){
+                    document.getElementById("extratwo").style.display = "none"
+                }else{
+                    document.getElementById("extratwo").style.display = "block"
+                }
+            }
+            function change(){
+                if (imgcount >= imgs.length -1){
+                    imgcount = 0
+                }else{
+                    imgcount += 1
+                }
+                document.getElementById('extratwo').src = imgs[imgcount]
+            }
+        </script>
     </head>
     <body>
     <h1>Helldivers 2</h1>
@@ -82,8 +108,8 @@
     <div id="trytwo">
     <h2>The three oposing factions:</h2>
     <p>There are three factions that you fight against, no you can not play as them. The first and oldest is the terminids. They are bugs, they were the first faction when the game first lanched and are my personal favorite to play against. Their units mainly charge you and meele you but a few can spit projectials and hit you from far away. The second is the automatons, They are a robot/cyborg faction. They are the second faction put into the game and the robots actually came before the cyborgs, but they are still the same faction. Their units also use projectials but they move faster then the terminids. Then the third is the illuminate. Imagine alians from the movies but put armor on them and make them a little taller and then you have an image of what they are. They are a small but powerfull faction that is the comunitys and my, least favorite to fight, but are also very interesting. Unlike the other two factions, the illuminate are more mysterious in their origins, the terminids are just larger mutated bugs, and the cyborgs and automatons are a split faction that came from the "super earth" faction, which is you, but the illuminate came from galaxys that we havent even seen.</p>
+    <img>
     <br>
-    <p id="extra">This is about stratigems. These things are what allow Helldivers to actually succeed in thier mishions, you select stratigems at the start of the mishion and during it you can input a code to call down the items you need. These can be support wepons or barages of artilery shells or other ways to destroy things.</p>
     </div>
     </div>
     <div id="parttwo">
@@ -112,8 +138,10 @@
     <br>
 
     <a href="https://en.wikipedia.org/wiki/Helldivers_2" target="_blank">This is the link to the Helldivers wiki.</a>
+    <p id="extra">This section is about stratagems. These things are what allow Helldivers to actually succeed in thier mishions, you select stratigems at the start of the mishion and during it you can input a code to call down the items you need. These can be support wepons or barages of artilery shells or other ways to destroy things.</p>
+    <img id="extratwo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8WkToQHkTrOC7hmF7MqJxSvSxmpdtaGfQmQ&s" alt="This was an image" onmouseover="change()"/>
     </div>
     </div>
-    <button id="button">****ing click me!!</button>
+    <button id="button" onclick="show(), showimg()">click me!</button>
     </body>
     </html>
