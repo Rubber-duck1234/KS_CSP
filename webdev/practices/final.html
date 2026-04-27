@@ -1,7 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title></title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Arbutus&display=swap" rel="stylesheet">
+        <title>CS Final</title>
         <meta charset="UTF-8"/>
-    </head>
-</html>
+        <style>
+            body{
+                background-color: rgb(7, 80, 7);
+                color: yellow;
+            }
+            #head{
+                text-align: center;
+                font-size: 2em;
+                font-family: "Arbutus", serif;
+                font-weight: 400;
+                font-style: normal;
+            }
+            #all{
+                display: grid;
+                grid-template-columns: 50% 50%;
+
+                font-family: "Arbutus", serif;
+                font-weight: 400;
+                font-style: normal;
+            }
+            #imgchange{
+                width: 50%;
+                height: 50%;
+            }
+        </style>
+        <script>
+            let imgs=["https://ctfassets.ksldigital.com/0wjmk6wgfops/30vMo9r30C5gc0ymwYt7mS/e4c0ed9975337f6570a06cad7d9b8af1/8e53c70584_95738d92-ecc7-45f1-a924-56b3a7350f15.jpg?w=1280&h=800&fit=fill&f=center&q=80&fm=webp", "https://ctfassets.ksldigital.com/0wjmk6wgfops/6CfgPVDYrhs5gAZm6l0gv9/270bf1712bb3a72cd3f7a204d5b62181/d54e848111_0dfca515-e09c-424f-9e53-b0eb821d0391.jpg?w=1280&h=800&fit=fill&f=center&q=80&fm=webp", "https://ctfassets.ksldigital.com/0wjmk6wgfops/1JSCdc84RdUoMmUjfVeEYb/5bbfa23bc98bb8bf50ead1a969bfc8d6/Bonneville_Salt_Flats_Mountains__resize_AdobeStock_313939134.jpeg?w=1200&q=70"]
+            let imgcount = 0
+
+            function change(){
+                if (imgcount >= imgs.length -1){
+                    imgcount = 0
+                }else{
+                    imgcount += 1
+                }
+                document.getElementById('imgchange').src = imgs[imgcount]
+            }
+        </script>
+    </head> <!--NOTES, add the racing as the hide and show part of the requerment, use an image there, and the chaning img does not count twords the three images. -->
+    <body>
+        <div id="head">
+        <h1>The Bonneville Salt Flats</h1>
+        </div>
+        <div id="all">
+        <div id="onehalf">
+        <br>
+        <p>The salt flats came from Lake Bonneville that once covered one-third of Utah, and now cover over 30,000 acres of land with salt. The Great Salt Lake is what remains of the large lake. The flats do have small ponds and marshy areas where some small plants and animals live. To the right of this is a list for why you should visit.</p>
+        <div id="startimgs">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTns-W992bTUtKkYFoXhUNZm7xIjjzki3TCew&s" alt="Faild to load img."/>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd1d7JDAEmeYm0CuGe9mKsk8zRW30NK7T1nQ&s" alt="failed to load img."/>
+        <br>
+        <p>This one changes when you hover over it.</p>
+        <img id="imgchange" src="https://ctfassets.ksldigital.com/0wjmk6wgfops/30vMo9r30C5gc0ymwYt7mS/e4c0ed9975337f6570a06cad7d9b8af1/8e53c70584_95738d92-ecc7-45f1-a924-56b3a7350f15.jpg?w=1280&h=800&fit=fill&f=center&q=80&fm=webp" alt="welp, that sucks." onmouseover="change()"/>
+        </div>
+        <br>
+        </div>
+        <div id="twohalf">
+        <ul>
+            <li>Salt. who doesn't want to see 147 million tons of it.</li>
+            <li>Landscape Pictures</li>
+            <li>Racing, lots of races happen there.</li>
+            <li>Star gazing and sun sets/rises, You can see the stars well there as well as sun rises and sun sets.</li>
+        </ul>
+        </div>
+        </div>
+    </body>
+</html> 
