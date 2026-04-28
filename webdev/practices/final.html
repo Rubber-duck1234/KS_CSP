@@ -7,6 +7,9 @@
         <title>CS Final</title>
         <meta charset="UTF-8"/>
         <style>
+            #hide{
+                display: none;
+            }
             body{
                 background-color: rgb(7, 80, 7);
                 color: yellow;
@@ -43,8 +46,15 @@
                 }
                 document.getElementById('imgchange').src = imgs[imgcount]
             }
+            function show(){
+                if (document.getElementById("hide").style.display == "block"){
+                    document.getElementById("hide").style.display = "none"
+                }else{
+                    document.getElementById("hide").style.display = "block"
+                }
+            }
         </script>
-    </head> <!--NOTES, add the racing as the hide and show part of the requerment, use an image there, and the chaning img does not count twords the three images. -->
+    </head>
     <body>
         <div id="head">
         <h1>The Bonneville Salt Flats</h1>
@@ -52,14 +62,15 @@
         <div id="all">
         <div id="onehalf">
         <br>
-        <p>The salt flats came from Lake Bonneville that once covered one-third of Utah, and now cover over 30,000 acres of land with salt. The Great Salt Lake is what remains of the large lake. The flats do have small ponds and marshy areas where some small plants and animals live. To the right of this is a list for why you should visit.</p>
+        <p>The salt flats came from Lake Bonneville that once covered one-third of Utah, and now covers 30,000 acres of land with salt. The Great Salt Lake is what remains of the lake. The flats do have small ponds and marshy areas where some small plants and animals live. The heat from the sun combined with the salt also makes a lot of reay real looking mirages. To the right of this is a list for why you should visit.</p>
         <div id="startimgs">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTns-W992bTUtKkYFoXhUNZm7xIjjzki3TCew&s" alt="Faild to load img."/>
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd1d7JDAEmeYm0CuGe9mKsk8zRW30NK7T1nQ&s" alt="failed to load img."/>
+        </div>
         <br>
         <p>This one changes when you hover over it.</p>
         <img id="imgchange" src="https://ctfassets.ksldigital.com/0wjmk6wgfops/30vMo9r30C5gc0ymwYt7mS/e4c0ed9975337f6570a06cad7d9b8af1/8e53c70584_95738d92-ecc7-45f1-a924-56b3a7350f15.jpg?w=1280&h=800&fit=fill&f=center&q=80&fm=webp" alt="welp, that sucks." onmouseover="change()"/>
-        </div>
+        
         <br>
         </div>
         <div id="twohalf">
@@ -69,6 +80,11 @@
             <li>Racing, lots of races happen there.</li>
             <li>Star gazing and sun sets/rises, You can see the stars well there as well as sun rises and sun sets.</li>
         </ul>
+        <div id="hide">
+        <p>The salt flats are known for races. Many word records have been broken here and lots of cool experiments have been tested as well. The fastest someone has gone was 763 mph, this was in 1997. The races also go all day from 9am to 6pm, it only costs 100$ for the whole event(one week) whith kids geting half price.</p>
+        <img src="https://ctfassets.ksldigital.com/0wjmk6wgfops/3Rkv1my4EulDc1UNxP9IAR/4c0b771fed8ede67c1d07a5fbb86fa01/271A8068.jpg?w=1280&h=800&fit=fill&f=center&q=80&fm=webp" alt="Hu. That faied."/>
+        </div>
+        <button id="button" onclick="show()">Click me!</button>
         </div>
         </div>
     </body>
