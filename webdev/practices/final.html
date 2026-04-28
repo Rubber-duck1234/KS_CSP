@@ -32,9 +32,25 @@
             #imgchange{
                 width: 50%;
                 height: 50%;
+                margin: 30px;
+            }
+            #sizeimg{
+                width: 35em;
+                height: 20em;
+            }
+            #paraone{
+                padding: 10px;
+            }
+            #paratwo{
+                padding: 10px;
+            }
+            #list{
+                padding: 10px;
+                
             }
         </style>
         <script>
+            let count = 0
             let imgs=["https://ctfassets.ksldigital.com/0wjmk6wgfops/30vMo9r30C5gc0ymwYt7mS/e4c0ed9975337f6570a06cad7d9b8af1/8e53c70584_95738d92-ecc7-45f1-a924-56b3a7350f15.jpg?w=1280&h=800&fit=fill&f=center&q=80&fm=webp", "https://ctfassets.ksldigital.com/0wjmk6wgfops/6CfgPVDYrhs5gAZm6l0gv9/270bf1712bb3a72cd3f7a204d5b62181/d54e848111_0dfca515-e09c-424f-9e53-b0eb821d0391.jpg?w=1280&h=800&fit=fill&f=center&q=80&fm=webp", "https://ctfassets.ksldigital.com/0wjmk6wgfops/1JSCdc84RdUoMmUjfVeEYb/5bbfa23bc98bb8bf50ead1a969bfc8d6/Bonneville_Salt_Flats_Mountains__resize_AdobeStock_313939134.jpeg?w=1200&q=70"]
             let imgcount = 0
 
@@ -53,6 +69,19 @@
                     document.getElementById("hide").style.display = "block"
                 }
             }
+            function add(){
+                count += 1
+                document.getElementById('here').innerHTML = count
+            }
+            function fun(){
+                if (count == 100){
+                    alert("YOU DID IT!")
+                }else if (count == 500){
+                    alert("YOU DID IT AGAIN")
+                }else if (count == 1000){
+                    alert("WOW, thats crazy, maybe get off this site?")
+                }
+            }
         </script>
     </head>
     <body>
@@ -62,7 +91,9 @@
         <div id="all">
         <div id="onehalf">
         <br>
+        <div id="paraone">
         <p>The salt flats came from Lake Bonneville that once covered one-third of Utah, and now covers 30,000 acres of land with salt. The Great Salt Lake is what remains of the lake. The flats do have small ponds and marshy areas where some small plants and animals live. The heat from the sun combined with the salt also makes a lot of reay real looking mirages. To the right of this is a list for why you should visit.</p>
+        </div>
         <div id="startimgs">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTns-W992bTUtKkYFoXhUNZm7xIjjzki3TCew&s" alt="Faild to load img."/>
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd1d7JDAEmeYm0CuGe9mKsk8zRW30NK7T1nQ&s" alt="failed to load img."/>
@@ -70,21 +101,27 @@
         <br>
         <p>This one changes when you hover over it.</p>
         <img id="imgchange" src="https://ctfassets.ksldigital.com/0wjmk6wgfops/30vMo9r30C5gc0ymwYt7mS/e4c0ed9975337f6570a06cad7d9b8af1/8e53c70584_95738d92-ecc7-45f1-a924-56b3a7350f15.jpg?w=1280&h=800&fit=fill&f=center&q=80&fm=webp" alt="welp, that sucks." onmouseover="change()"/>
-        
         <br>
         </div>
         <div id="twohalf">
+        <div id="list">
         <ul>
             <li>Salt. who doesn't want to see 147 million tons of it.</li>
             <li>Landscape Pictures</li>
             <li>Racing, lots of races happen there.</li>
             <li>Star gazing and sun sets/rises, You can see the stars well there as well as sun rises and sun sets.</li>
         </ul>
+        </div>
         <div id="hide">
-        <p>The salt flats are known for races. Many word records have been broken here and lots of cool experiments have been tested as well. The fastest someone has gone was 763 mph, this was in 1997. The races also go all day from 9am to 6pm, it only costs 100$ for the whole event(one week) whith kids geting half price.</p>
-        <img src="https://ctfassets.ksldigital.com/0wjmk6wgfops/3Rkv1my4EulDc1UNxP9IAR/4c0b771fed8ede67c1d07a5fbb86fa01/271A8068.jpg?w=1280&h=800&fit=fill&f=center&q=80&fm=webp" alt="Hu. That faied."/>
+        <div id="paratwo">
+        <p>The salt flats are known for races. Many world records have been broken here and lots of cool experiments have been tested as well. The fastest someone has gone was 763 mph, this was in 1997 and was done by using a jet engine on that back of a car. The races also go all day from 9am to 6pm, it only costs 100$ for the whole event(one week) with kids geting half price.</p>
+        </div>
+        <img src="https://ctfassets.ksldigital.com/0wjmk6wgfops/3Rkv1my4EulDc1UNxP9IAR/4c0b771fed8ede67c1d07a5fbb86fa01/271A8068.jpg?w=1280&h=800&fit=fill&f=center&q=80&fm=webp" alt="Hu. That faied." id="sizeimg"/>
         </div>
         <button id="button" onclick="show()">Click me!</button>
+        <br>
+        <p id="here">0</p>
+        <button id="useless" onclick="add(), fun()">Hi</button>
         </div>
         </div>
     </body>
