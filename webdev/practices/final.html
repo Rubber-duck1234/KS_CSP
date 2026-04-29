@@ -46,7 +46,7 @@
             }
             #list{
                 padding: 10px;
-                
+                margin: 5px;
             }
         </style>
         <script>
@@ -76,11 +76,11 @@
             function fun(){
                 if (count == 100){
                     alert("YOU DID IT!")
-                }else if (count == 500){
+                }else if (count == 250){
                     alert("YOU DID IT AGAIN! now go to the salt flats")
-                }else if (count == 1000){
+                }else if (count == 750){
                     alert("WOW, thats crazy, maybe stop clicking the button and go to the salt flats?")
-                }else if (count == 2000){
+                }else if (count == 1000){
                     alert("OK. you need help")
                 }
             }
@@ -123,7 +123,7 @@
         <button id="button" onclick="show()">Click me!</button>
         <br>
         <p id="here">0</p>
-        <button id="useless" onclick="add(), fun()" onmouseup="add()">Hi</button>
+        <button id="useless" onmousedown="add(), fun()" onmouseup="add(), fun()">Hi</button>
         </div>
         </div>
     </body>
