@@ -48,6 +48,10 @@
                 padding: 10px;
                 margin: 5px;
             }
+            #fixsize{
+                height: 650px;
+                width: 850px;
+            }
         </style>
         <script>
             let count = 0
@@ -69,21 +73,6 @@
                     document.getElementById("hide").style.display = "block"
                 }
             }
-            function add(){
-                count += 1
-                document.getElementById('here').innerHTML = count
-            }
-            function fun(){
-                if (count == 100){
-                    alert("YOU DID IT!")
-                }else if (count == 250){
-                    alert("YOU DID IT AGAIN! now go to the salt flats")
-                }else if (count == 750){
-                    alert("WOW, thats crazy, maybe stop clicking the button and go to the salt flats?")
-                }else if (count == 1000){
-                    alert("OK. you need help")
-                }
-            }
         </script>
     </head>
     <body>
@@ -102,7 +91,9 @@
         </div>
         <br>
         <p>This one changes when you hover over it.</p>
+        <div id="fixsize">
         <img id="imgchange" src="https://ctfassets.ksldigital.com/0wjmk6wgfops/30vMo9r30C5gc0ymwYt7mS/e4c0ed9975337f6570a06cad7d9b8af1/8e53c70584_95738d92-ecc7-45f1-a924-56b3a7350f15.jpg?w=1280&h=800&fit=fill&f=center&q=80&fm=webp" alt="welp, that sucks." onmouseover="change()"/>
+        </div>
         <br>
         </div>
         <div id="twohalf">
@@ -121,9 +112,6 @@
         <img src="https://ctfassets.ksldigital.com/0wjmk6wgfops/3Rkv1my4EulDc1UNxP9IAR/4c0b771fed8ede67c1d07a5fbb86fa01/271A8068.jpg?w=1280&h=800&fit=fill&f=center&q=80&fm=webp" alt="Hu. That faied." id="sizeimg"/>
         </div>
         <button id="button" onclick="show()">More infomation.</button>
-        <br>
-        <p id="here">0</p>
-        <button id="useless" onmousedown="add(), fun()" onmouseup="add(), fun()">This is just for fun</button>
         </div>
         </div>
     </body>
